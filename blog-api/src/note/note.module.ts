@@ -1,4 +1,11 @@
 import { Module } from '@nestjs/common';
+import { NoteService } from './note.service';
+import { NoteController } from './note.controller';
 
-@Module({})
-export class NoteModule {}
+@Module({
+    controllers: [NoteController],
+    providers: [NoteService]
+})
+export class NoteModule { }
+
+
